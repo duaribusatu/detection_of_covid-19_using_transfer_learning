@@ -37,7 +37,7 @@ def main():
 # Function to preprocess image before making prediction
 def predict_image(image):
     # Upload model
-    mymodel = 'D:/deploy_covid19/EFv12400_covid_detection_model.h5'
+    mymodel = 'model/EFv12400_covid_detection_model.h5'
     classifier_model = load_model(mymodel, custom_objects={'KerasLayer': hub.KerasLayer}, compile=False)
     # Resize image
     image_process = image.resize((224, 224))
